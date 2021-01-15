@@ -7,6 +7,10 @@ public class openClose : MonoBehaviour
     [SerializeField] public bool opened = false;
     [SerializeField] public bool interactable = true;
     [SerializeField] public bool locked = false;
+    [SerializeField] public string requiredItem = "";
+
+
+    inventory playerInv; // Players Inventory
 
 
     public bool lookedAt = false;
@@ -22,8 +26,14 @@ public class openClose : MonoBehaviour
         startX = transform.position;
         actionDisplay = GameObject.Find("myButton");
         actionDisplay.SetActive(false);
+
+
+        playerInv = GameObject.Find("game").GetComponent<inventory>();
+
+
+
     }
- 
+
 
 
     void Update()
@@ -32,8 +42,7 @@ public class openClose : MonoBehaviour
 
         if (lookedAt){
                 actionDisplay.SetActive(true);    //too put x image - may not want
-                listenForKey();  
-                
+                listenForKey();                  
         }
 
         lookedAt = false;
@@ -56,6 +65,16 @@ public class openClose : MonoBehaviour
                 keyXPressed();
 
             } else {
+
+                string curSel = playerInv.myInvItems[playerInv.curInvSel].name;
+
+
+                if (curSel == requiredItem)
+                {
+                    keyXPressed();
+                    //Debug.Log(playerInv.curInvSel + "open says me");
+                }
+
                 Debug.Log("Locked!!!!!!!!!");
 
             }

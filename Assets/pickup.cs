@@ -8,7 +8,8 @@ public class pickup : MonoBehaviour
     [SerializeField] public bool canPickUp = true;
     [SerializeField] public bool interactable = true;
     [SerializeField] public bool locked = false;
-    [SerializeField] public string item = "Coin";
+    //[SerializeField] public string item = "Coin";
+    [SerializeField] public bool spinning = false;
 
 
     inventory myINV;
@@ -29,8 +30,12 @@ public class pickup : MonoBehaviour
 
     void Update()
     {
-        transform.Rotate(0,2.5f,0 * Time.deltaTime);
-        
+
+        if (spinning)
+        {
+            transform.Rotate(0, 2.5f, 0 * Time.deltaTime);
+        }
+
         if (lookedAt){
                 listenForKey();          
         }

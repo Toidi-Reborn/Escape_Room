@@ -11,7 +11,7 @@ public class inventory : MonoBehaviour {
     private List<GameObject> invItems = new List<GameObject>();
     public List<GameObject> myInvItems = new List<GameObject>();
     private bool showInv = false;
-    private int curInvSel = 0;
+    public int curInvSel = 0;
 
     public GameObject itemList;
 
@@ -51,23 +51,14 @@ public class inventory : MonoBehaviour {
                 myInvItems.Add(child.gameObject);
             } else
             {
-                child.gameObject.SetActive(false);
+                //myInvItems.Add(child.gameObject);
+                //child.gameObject.SetActive(false);
             }
 
         }
         
 
-        /*  for testing */
-        string pName = "Key 001";
-        foreach (Transform gg in itemList.transform)
-        {
-            
-            if (gg.name == pName)
-            {
-                myInvItems.Add(gg.gameObject);
-                Debug.Log(gg);
-            }
-        }
+     
     }
     
      
@@ -89,8 +80,7 @@ public class inventory : MonoBehaviour {
         if (showInv) {
 
             int count = myInvItems.Count;
-
-
+            
             if (Input.GetKeyDown("up"))
             {
                 moveUp(count);
@@ -136,7 +126,6 @@ public class inventory : MonoBehaviour {
         {
             invSpots[i].SetActive(true);
             myInvItems[i].SetActive(true);
-            Debug.Log(invSpots[i].gameObject.transform.Find("name").GetComponent<UnityEngine.UI.Text>().text);
 
             myInvItems[i].transform.position = invSpots[i].transform.position;
             invSpots[i].gameObject.transform.Find("name").GetComponent<UnityEngine.UI.Text>().text = myInvItems[i].name;

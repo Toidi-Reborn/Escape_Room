@@ -68,11 +68,14 @@ public class pControl : MonoBehaviour
                         return;
                     } else {
                         thisPickUp.lookedAt = true;
+                        
                         centerLook.SetActive(true);
                         return;
                     }
                 } else {  // if door not null
                     thisDoor.lookedAt = true;  ///////////////////
+                    string needed = thisDoor.requiredItem;  //Need?
+
                     if (thisDoor.locked) {
                         lText.SetActive(true);
                     }

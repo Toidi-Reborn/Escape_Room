@@ -7,7 +7,10 @@ public class openCloseDoor : MonoBehaviour
     [SerializeField] public bool opened = false;
     [SerializeField] public bool interactable = true;
     [SerializeField] public bool locked = false;
+    [SerializeField] public string requiredItem = "";
 
+
+    inventory playerInv; // Players Inventory
 
     public bool lookedAt = false;
     private GameObject actionDisplay;
@@ -20,9 +23,11 @@ public class openCloseDoor : MonoBehaviour
     {
         actionDisplay = this.transform.Find("myButton").gameObject;
         //hinge = this.transform;
+        playerInv = GameObject.Find("game").GetComponent<inventory>();
+
 
     }
- 
+
 
 
     void Update()
@@ -57,6 +62,15 @@ public class openCloseDoor : MonoBehaviour
                 keyXPressed();
 
             } else {
+                string curSel = playerInv.myInvItems[playerInv.curInvSel].name;
+
+
+                if (curSel == requiredItem )
+                {
+                    keyXPressed();
+                    //Debug.Log(playerInv.curInvSel + "open says me");
+                }
+               
                 Debug.Log("Locked!!!!!!!!!");
 
             }
