@@ -27,10 +27,8 @@ public class openClose : MonoBehaviour
         actionDisplay = GameObject.Find("myButton");
         actionDisplay.SetActive(false);
 
-
+ 
         playerInv = GameObject.Find("game").GetComponent<inventory>();
-
-
 
     }
 
