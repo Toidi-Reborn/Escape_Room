@@ -4,20 +4,50 @@ using UnityEngine;
 
 public class pControl : MonoBehaviour
 {
-    
-
+   
     [SerializeField] Camera playerCamera;
-    float range = 5f;
+    float range = 28f;
 
     GameObject thisHit;  //for raycast
     openClose thisDrawer; // drawer movement
     openCloseDoor thisDoor; // door movement
+
     pickup thisPickUp; // item pickup
     keyPad thisKeyPad; // keypad
+    dailRotate thisDail; // end game dail
+    monitor thisPC;  // PC Screen
+
+    //combine raycasting
+    interactable thisRayHit;
+
+
+
 
     GameObject aText;
     GameObject lText;
     GameObject centerLook;
+
+
+    float charHeight;
+    float charGround;
+
+    float charHeightM;
+    float charHeightC;
+
+    float charBottomM;
+    float charBottomC;
+
+
+    private Vector3 originalCenter;
+    private float originalHeight;
+    private float originalMoveSpeed;
+    public CharacterController controller;
+    public GameObject myCamera;
+    public float moveSpeed;
+
+
+
+
 
     void Start(){
 
@@ -27,39 +57,43 @@ public class pControl : MonoBehaviour
 
         aText.SetActive(false);
         lText.SetActive(false);
-        centerLook.SetActive(false);        
-        
+        centerLook.SetActive(false);
+
+        //for test
+        //Debug.Log(charBottomM + " - " + charBottomC + " - " + charheightM + " - " + charheightC);
+
+
     }
 
 
     void Update(){
-        
         ProcessRaycast2();
         keyPadRayCast();
+        DailRayCast();
+
+        //pcRayCast();
+
+        // new raycast way (by inheriting a class) to avoid multiple raycasts
+
+        allRayCast();
+
+   
     }
 
-
-
-    private void RayCastHit()
+    private void allRayCast()
     {
         RaycastHit hit;
         if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, range))
         {
-            //thisHit = hit.collider.gameObject.GetComponent<keyPad>();
+            thisRayHit = hit.collider.gameObject.GetComponent<interactable>();
 
-            thisHit = hit.collider.gameObject;
-
-            Debug.Log(thisHit.name);
-
-
-
-            if (thisHit == null)
+            if (thisRayHit == null)
             {
                 return;
             }
             else
             {
-                //thisKeyPad.lookedAt = true;
+                thisRayHit.lookedAt = true;
                 centerLook.SetActive(true);
 
                 //Debug.Log("dsfdfdsfsdfsdfdsf");
@@ -69,6 +103,83 @@ public class pControl : MonoBehaviour
     }
 
 
+ 
+    /*
+    private void pcRayCast()
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, range))
+        {
+            thisPC = hit.collider.gameObject.GetComponent<monitor>();
+
+            if (thisPC == null)
+            {
+                return;
+            }
+            else
+            {
+                thisPC.lookedAt = true;
+                centerLook.SetActive(true);
+
+                //Debug.Log("dsfdfdsfsdfsdfdsf");
+            }
+        }
+
+    }
+
+
+    */
+
+
+
+
+    /*
+    private void RayCastHit()
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, range))
+        {
+
+            thisHit = hit.collider.gameObject;
+
+            if (thisHit == null)
+            {
+                return;
+            }
+            else
+            {
+                //thisKeyPad.lookedAt = true;
+                centerLook.SetActive(true);
+                
+            }
+        }
+
+    }
+    */
+
+
+
+    private void DailRayCast()
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, range))
+        {
+            thisDail = hit.collider.gameObject.GetComponent<dailRotate>();
+
+            if (thisDail == null)
+            {
+                return;
+            }
+            else
+            {
+                thisDail.lookedAt = true;
+                centerLook.SetActive(true);
+
+                //Debug.Log("dsfdfdsfsdfsdfdsf");
+            }
+        }
+
+    }
 
 
 

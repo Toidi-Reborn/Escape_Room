@@ -16,15 +16,19 @@ public class inventory : MonoBehaviour {
     public GameObject itemList;
 
     GameObject window;
+    monitorWindow monitorScreen;
     FirstPersonController fpc;
     GameObject invSelect;
-    
 
 
-// Need to generate item squars through script.... delete prefab parts
-    
+
+    // Need to generate item squars through script.... delete prefab parts
+
     void Start() {
-        
+
+        monitorScreen = GameObject.Find("iMonitorWindow").GetComponent<monitorWindow>();
+
+
         for (var i = 1; i < 13; i++)
         {
             invSpots.Add(GameObject.Find("InvSpot" + i.ToString()));
@@ -35,7 +39,9 @@ public class inventory : MonoBehaviour {
 
         window = GameObject.Find("iWindow");
         window.SetActive(false);
-        
+
+
+
         fpc = GameObject.Find("Player").GetComponent<FirstPersonController>();
 
         itemList = GameObject.Find("items");
@@ -56,14 +62,12 @@ public class inventory : MonoBehaviour {
             }
 
         }
-        
-
      
     }
     
      
     void Update() {
-        if (Input.GetKeyDown(KeyCode.I)) {
+        if (monitorScreen.screenActive == false && Input.GetKeyDown(KeyCode.I)) {
             if (showInv){
                 hide();
             } else {

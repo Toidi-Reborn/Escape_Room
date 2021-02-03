@@ -2,18 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LightSwitch : MonoBehaviour
+public class switchMain : interactable
 {
-
     private List<GameObject> allLights = new List<GameObject>();
     [SerializeField] GameObject light1;
     [SerializeField] GameObject light2;
     [SerializeField] GameObject light3;
-   
+
 
     GameObject on;
     GameObject off;
-    int lightCount;
+    //int lightCount;
     bool lightOn = true;
 
     Color32 greenColorOn = new Color32(0, 255, 0, 1);
@@ -21,46 +20,34 @@ public class LightSwitch : MonoBehaviour
     Color32 redColorOn = new Color32(255, 0, 0, 1);
     Color32 redColorOff = new Color32(55, 0, 0, 1);
 
-    
-    void Start()
-    {
-       
-        if (light2 == null)
-        {
-            lightCount = 1;
 
-        } else if (light3 == null)
-        {
-            lightCount = 2;
-        } else
-        {
-            lightCount = 3;
-        }
-        
+    private void Start()
+    {
+
         on = GameObject.Find("On");
         off = GameObject.Find("Off");
 
         on.gameObject.GetComponent<MeshRenderer>().material.color = greenColorOn;
         off.gameObject.GetComponent<MeshRenderer>().material.color = redColorOff;
-
-
-
-        Debug.Log(lightCount);
-        
     }
 
-    // Update is called once per frame
-    void Update()
+
+
+
+
+    private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (lookedAt)
         {
-            flipSwitch();
+            if (Input.GetKeyDown(KeyCode.K))
+            {
+                flipSwitch();
+
+            }
 
         }
 
-
-
-
+        lookedAt = false;
     }
 
 
@@ -115,6 +102,11 @@ public class LightSwitch : MonoBehaviour
 
 
     }
+
+
+
+
+
 
 
 }

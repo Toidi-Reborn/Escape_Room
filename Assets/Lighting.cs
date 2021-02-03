@@ -25,16 +25,7 @@ public class Lighting : MonoBehaviour
     {
         for (int i = 1; i <= lightTotal; i++)
         {
-
-
-
             var thisLight = "light" + i.ToString();
-
-
-
-
-            //Debug.Log(thisLight);
-                       
 
         }
 
@@ -56,7 +47,8 @@ public class Lighting : MonoBehaviour
 
     public void lightToggle(GameObject x)
     {
-        Debug.Log(x.activeInHierarchy);
+        bool cur = x.activeInHierarchy;
+        x.SetActive(!cur);
 
 
     }
