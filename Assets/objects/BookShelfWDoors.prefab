@@ -327,11 +327,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   opened: 0
-  interactable: 1
+  canPickUp: 1
   locked: 0
+  spinning: 0
   alarm: 0
   reversed: 0
   requiredItem: 
+  searchable: 0
+  readable: 0
   lookedAt: 0
 --- !u!65 &5959879872866486572
 BoxCollider:
@@ -1327,11 +1330,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   opened: 0
-  interactable: 1
+  canPickUp: 1
   locked: 0
+  spinning: 0
   alarm: 0
   reversed: 1
   requiredItem: 
+  searchable: 0
+  readable: 0
   lookedAt: 0
 --- !u!65 &8832909815750578382
 BoxCollider:
@@ -1486,11 +1492,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   opened: 0
-  interactable: 1
+  canPickUp: 1
   locked: 0
+  spinning: 0
   alarm: 0
   reversed: 0
   requiredItem: 
+  searchable: 0
+  readable: 0
   lookedAt: 0
 --- !u!65 &7054052925922489495
 BoxCollider:
@@ -1552,11 +1561,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   opened: 0
-  interactable: 1
+  canPickUp: 1
   locked: 0
+  spinning: 0
   alarm: 0
   reversed: 0
   requiredItem: 
+  searchable: 0
+  readable: 0
   lookedAt: 0
 --- !u!65 &7411088365873425504
 BoxCollider:
@@ -1757,11 +1769,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   opened: 0
-  interactable: 1
+  canPickUp: 1
   locked: 0
+  spinning: 0
   alarm: 0
   reversed: 1
   requiredItem: 
+  searchable: 0
+  readable: 0
   lookedAt: 0
 --- !u!65 &1031819131682837199
 BoxCollider:
@@ -2475,11 +2490,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   opened: 0
-  interactable: 1
+  canPickUp: 1
   locked: 0
+  spinning: 0
   alarm: 0
   reversed: 1
   requiredItem: 
+  searchable: 0
+  readable: 0
   lookedAt: 0
 --- !u!65 &1918348095667326647
 BoxCollider:

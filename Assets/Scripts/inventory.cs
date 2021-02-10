@@ -21,9 +21,6 @@ public class inventory : MonoBehaviour {
     GameObject invSelect;
 
 
-
-    // Need to generate item squars through script.... delete prefab parts
-
     void Start() {
 
         monitorScreen = GameObject.Find("iMonitorWindow").GetComponent<monitorWindow>();
@@ -39,7 +36,6 @@ public class inventory : MonoBehaviour {
 
         window = GameObject.Find("iWindow");
         window.SetActive(false);
-
 
 
         fpc = GameObject.Find("Player").GetComponent<FirstPersonController>();
@@ -108,18 +104,19 @@ public class inventory : MonoBehaviour {
 
     public void addToMyInv(string pName)
     {
-        
+
         foreach (Transform gg in itemList.transform)
         {
 
             if (gg.name == pName)
             {
                 myInvItems.Add(gg.gameObject);
-                //Debug.Log(gg);
             }
         }
 
     }
+
+
 
 
     private void setInvSpots()

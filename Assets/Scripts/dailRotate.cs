@@ -46,8 +46,6 @@ public class dailRotate : MonoBehaviour
             {
                 dailNumber += 1;
             }
-            //Debug.Log(dailNumber);
-
 
         }
     }

@@ -185,11 +185,7 @@ public class keyPad : MonoBehaviour
         }
 
 
-
-
-
-
-        //displayText = display.transform.Find("Text").GetComponent<TextMeshPro>().text;
+         //displayText = display.transform.Find("Text").GetComponent<TextMeshPro>().text;
 
     }
 
