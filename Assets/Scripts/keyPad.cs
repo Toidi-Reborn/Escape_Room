@@ -9,6 +9,10 @@ public class keyPad : MonoBehaviour
 
     [SerializeField] public bool interactable = true;
     [SerializeField] public string keyNumber;
+    [SerializeField] public string keyCode;
+    [SerializeField] GameObject caseDoor;
+
+    openCloseCaseDoor caseDoorScript; 
 
     GameObject display;
     private string displayText;
@@ -29,9 +33,11 @@ public class keyPad : MonoBehaviour
 
     void Start()
     {
+        caseDoorScript = caseDoor.GetComponent<openCloseCaseDoor>();
+
         display = GameObject.Find("Display");
         //displayText = display.transform.Find("Text").GetComponent<TextMeshPro>().text;
-        display.transform.Find("Text").GetComponent<TextMeshPro>().text = "222";
+        display.transform.Find("Text").GetComponent<TextMeshPro>().text = "CODE?";
 
         thisColor = gameObject.GetComponent<MeshRenderer>().material.color;
 
@@ -173,14 +179,16 @@ public class keyPad : MonoBehaviour
 
     private void checkCode()
     {
-        if (displayText == "2220")
+        if (displayText == keyCode)
         {
 
             display.gameObject.GetComponent<MeshRenderer>().material.color = new Color(0, 255, 0, 255);
+            caseDoorScript.opened = true;
             flashingOpen = true;
 
         } else
         {
+            caseDoorScript.opened = false;
             flashRed();
         }
 

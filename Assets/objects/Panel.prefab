@@ -459,6 +459,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactable: 1
   keyNumber: 2
+  keyCode: 
+  caseDoor: {fileID: 0}
   lookedAt: 0
 --- !u!1 &1674772546035511384
 GameObject:
@@ -919,6 +921,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactable: 1
   keyNumber: 4
+  keyCode: 
+  caseDoor: {fileID: 0}
   lookedAt: 0
 --- !u!1 &2305770761998331250
 GameObject:
@@ -1029,6 +1033,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactable: 1
   keyNumber: 0
+  keyCode: 6984
+  caseDoor: {fileID: 0}
   lookedAt: 0
 --- !u!1 &2445209410883600364
 GameObject:
@@ -1707,6 +1713,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactable: 1
   keyNumber: Clear
+  keyCode: 
+  caseDoor: {fileID: 0}
   lookedAt: 0
 --- !u!1 &4275161860745229074
 GameObject:
@@ -1817,6 +1825,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactable: 1
   keyNumber: 6
+  keyCode: 
+  caseDoor: {fileID: 0}
   lookedAt: 0
 --- !u!1 &4667258350334241261
 GameObject:
@@ -1927,6 +1937,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactable: 1
   keyNumber: 3
+  keyCode: 
+  caseDoor: {fileID: 0}
   lookedAt: 0
 --- !u!1 &5500687270029047908
 GameObject:
@@ -2130,6 +2142,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactable: 1
   keyNumber: Enter
+  keyCode: 
+  caseDoor: {fileID: 0}
   lookedAt: 0
 --- !u!1 &5741526586655903582
 GameObject:
@@ -2415,6 +2429,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactable: 1
   keyNumber: 7
+  keyCode: 
+  caseDoor: {fileID: 0}
   lookedAt: 0
 --- !u!1 &6003899448179802930
 GameObject:
@@ -2525,6 +2541,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactable: 1
   keyNumber: 8
+  keyCode: 
+  caseDoor: {fileID: 0}
   lookedAt: 0
 --- !u!1 &6976650523220546039
 GameObject:
@@ -2635,6 +2653,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactable: 1
   keyNumber: 9
+  keyCode: 
+  caseDoor: {fileID: 0}
   lookedAt: 0
 --- !u!1 &7105399388004260967
 GameObject:
@@ -3095,6 +3115,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactable: 1
   keyNumber: 1
+  keyCode: 
+  caseDoor: {fileID: 0}
   lookedAt: 0
 --- !u!1 &7750534289100553670
 GameObject:
@@ -3380,6 +3402,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactable: 1
   keyNumber: 5
+  keyCode: 
+  caseDoor: {fileID: 0}
   lookedAt: 0
 --- !u!1 &8576160431892178641
 GameObject:
