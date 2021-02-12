@@ -11,13 +11,13 @@ public class openCloseDoor : interactable
     alarm alarmScript;
 
     //public bool lookedAt = false;
-    private GameObject actionDisplay;
+    //private GameObject actionDisplay;
     //private GameObject hinge;
     private float distanceMoved = 0f;
     
     void Start()
     {
-        actionDisplay = this.transform.Find("myButton").gameObject;
+        //actionDisplay = this.transform.Find("myButton").gameObject;
         //hinge = this.transform;
         playerInv = GameObject.Find("game").GetComponent<inventory>();
         alarmScript = GameObject.Find("Lighting").GetComponent<alarm>();
@@ -29,10 +29,10 @@ public class openCloseDoor : interactable
 
     void Update()
     {
-        actionDisplay.SetActive(false);
+        //actionDisplay.SetActive(false);
 
         if (lookedAt){
-                actionDisplay.SetActive(true);   //too put x image - may not want
+                //actionDisplay.SetActive(true);   //too put x image - may not want
                 listenForKey();  
                 
         }

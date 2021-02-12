@@ -21,7 +21,8 @@ public class pControl : MonoBehaviour
     monitor thisPC;  // PC Screen
 
     //combine raycasting
-    interactable thisRayHit;
+    //interactable thisRayHit;
+    actionItem thisRayHit;
 
     Color c;
 
@@ -107,7 +108,7 @@ public class pControl : MonoBehaviour
 
         if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, range))
         {
-            thisRayHit = hit.collider.gameObject.GetComponent<interactable>();
+            thisRayHit = hit.collider.gameObject.GetComponent<actionItem>();
 
             if (thisRayHit == null)
             {
@@ -123,7 +124,6 @@ public class pControl : MonoBehaviour
                 } else if (thisRayHit.readable)
                 {
                     rText.SetActive(true);
-
                 }
                 
             }

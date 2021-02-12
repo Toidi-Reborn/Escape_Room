@@ -8,7 +8,7 @@ public class openClose : interactable
     inventory playerInv; // Players Inventory
 
 
-    private GameObject actionDisplay;
+    //private GameObject actionDisplay;
 
 
 
@@ -18,8 +18,8 @@ public class openClose : interactable
     void Start()
     {
         startX = transform.position;
-        actionDisplay = GameObject.Find("myButton");
-        actionDisplay.SetActive(false);
+        //actionDisplay = GameObject.Find("myButton");
+        //actionDisplay.SetActive(false);
 
  
         playerInv = GameObject.Find("game").GetComponent<inventory>();
@@ -30,10 +30,10 @@ public class openClose : interactable
 
     void Update()
     {
-        actionDisplay.SetActive(false);
+        //actionDisplay.SetActive(false);
 
         if (lookedAt){
-                actionDisplay.SetActive(true);    //too put x image - may not want
+                //actionDisplay.SetActive(true);    //too put x image - may not want
                 listenForKey();                  
         }
 
@@ -95,7 +95,6 @@ public class openClose : interactable
             distanceMoved -= Vector3.Distance(oldSpot, transform.position);
 
         } else {
-            //reset to start spot
             transform.position = startX;
 
         }

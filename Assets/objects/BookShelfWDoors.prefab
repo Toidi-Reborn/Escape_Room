@@ -289,8 +289,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1913594776586180680}
-  - component: {fileID: 4215434945896679447}
   - component: {fileID: 5959879872866486572}
+  - component: {fileID: 3120236822076176881}
   m_Layer: 0
   m_Name: RDoor
   m_TagString: Untagged
@@ -314,28 +314,6 @@ Transform:
   m_Father: {fileID: 3272639653596534872}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4215434945896679447
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 650411158906912045}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c68c61f8d35abba45896ca2ca7e81cd4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  opened: 0
-  canPickUp: 1
-  locked: 0
-  spinning: 0
-  alarm: 0
-  reversed: 0
-  requiredItem: 
-  searchable: 0
-  readable: 0
-  lookedAt: 0
 --- !u!65 &5959879872866486572
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -349,6 +327,34 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 0.24219513}
   m_Center: {x: -0.25, y: 0.37, z: -4.6289024}
+--- !u!114 &3120236822076176881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650411158906912045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 532a6444cb37acb4b865a71acc4cc8b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  opened: 0
+  isDoor: 1
+  isDrawer: 0
+  locked: 0
+  requiredItem: 
+  doorHinge: {fileID: 0}
+  reversed: 0
+  canPickUp: 0
+  spinning: 0
+  hasAlarm: 0
+  searchable: 0
+  itemInside: {fileID: 0}
+  readable: 0
+  message: Placeholder Text
+  messageAlive: 10
+  lookedAt: 0
 --- !u!1 &724092814831890521
 GameObject:
   m_ObjectHideFlags: 0
@@ -1292,8 +1298,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3417402162017789615}
-  - component: {fileID: 1874196013864422011}
   - component: {fileID: 8832909815750578382}
+  - component: {fileID: 3002755723224016772}
   m_Layer: 0
   m_Name: LDoor
   m_TagString: Untagged
@@ -1317,28 +1323,6 @@ Transform:
   m_Father: {fileID: 4080661226561917009}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1874196013864422011
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3262537957905602659}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c68c61f8d35abba45896ca2ca7e81cd4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  opened: 0
-  canPickUp: 1
-  locked: 0
-  spinning: 0
-  alarm: 0
-  reversed: 1
-  requiredItem: 
-  searchable: 0
-  readable: 0
-  lookedAt: 0
 --- !u!65 &8832909815750578382
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1352,6 +1336,34 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 0.24219513}
   m_Center: {x: -2.42, y: 0.37, z: -4.6289024}
+--- !u!114 &3002755723224016772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3262537957905602659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 532a6444cb37acb4b865a71acc4cc8b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  opened: 0
+  isDoor: 1
+  isDrawer: 0
+  locked: 0
+  requiredItem: 
+  doorHinge: {fileID: 0}
+  reversed: 1
+  canPickUp: 0
+  spinning: 0
+  hasAlarm: 0
+  searchable: 0
+  itemInside: {fileID: 0}
+  readable: 0
+  message: Placeholder Text
+  messageAlive: 10
+  lookedAt: 0
 --- !u!1 &3823174236148294718
 GameObject:
   m_ObjectHideFlags: 0
@@ -1454,8 +1466,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3551268473054150142}
-  - component: {fileID: 7958188141991076209}
   - component: {fileID: 7054052925922489495}
+  - component: {fileID: 4943352341126010404}
   m_Layer: 0
   m_Name: RDoor
   m_TagString: Untagged
@@ -1479,28 +1491,6 @@ Transform:
   m_Father: {fileID: 5745957016364930248}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7958188141991076209
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4424620032351016923}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c68c61f8d35abba45896ca2ca7e81cd4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  opened: 0
-  canPickUp: 1
-  locked: 0
-  spinning: 0
-  alarm: 0
-  reversed: 0
-  requiredItem: 
-  searchable: 0
-  readable: 0
-  lookedAt: 0
 --- !u!65 &7054052925922489495
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1514,6 +1504,34 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 0.24219513}
   m_Center: {x: -0.25, y: 0.37, z: -4.6289024}
+--- !u!114 &4943352341126010404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4424620032351016923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 532a6444cb37acb4b865a71acc4cc8b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  opened: 0
+  isDoor: 1
+  isDrawer: 0
+  locked: 0
+  requiredItem: 
+  doorHinge: {fileID: 0}
+  reversed: 0
+  canPickUp: 0
+  spinning: 0
+  hasAlarm: 0
+  searchable: 0
+  itemInside: {fileID: 0}
+  readable: 0
+  message: Placeholder Text
+  messageAlive: 10
+  lookedAt: 0
 --- !u!1 &4446650519346762206
 GameObject:
   m_ObjectHideFlags: 0
@@ -1523,8 +1541,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4355785459304198667}
-  - component: {fileID: 823790894911022950}
   - component: {fileID: 7411088365873425504}
+  - component: {fileID: 8470093738129842563}
   m_Layer: 0
   m_Name: RDoor
   m_TagString: Untagged
@@ -1548,28 +1566,6 @@ Transform:
   m_Father: {fileID: 767932674013866530}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &823790894911022950
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4446650519346762206}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c68c61f8d35abba45896ca2ca7e81cd4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  opened: 0
-  canPickUp: 1
-  locked: 0
-  spinning: 0
-  alarm: 0
-  reversed: 0
-  requiredItem: 
-  searchable: 0
-  readable: 0
-  lookedAt: 0
 --- !u!65 &7411088365873425504
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1583,6 +1579,34 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 0.24219513}
   m_Center: {x: -0.25, y: 0.37, z: -4.6289024}
+--- !u!114 &8470093738129842563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4446650519346762206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 532a6444cb37acb4b865a71acc4cc8b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  opened: 0
+  isDoor: 1
+  isDrawer: 0
+  locked: 0
+  requiredItem: 
+  doorHinge: {fileID: 0}
+  reversed: 0
+  canPickUp: 0
+  spinning: 0
+  hasAlarm: 0
+  searchable: 0
+  itemInside: {fileID: 0}
+  readable: 0
+  message: Placeholder Text
+  messageAlive: 10
+  lookedAt: 0
 --- !u!1 &5989800968284343662
 GameObject:
   m_ObjectHideFlags: 0
@@ -1731,8 +1755,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4580949699855838779}
-  - component: {fileID: 7926036374300473990}
   - component: {fileID: 1031819131682837199}
+  - component: {fileID: 6513621472194435483}
   m_Layer: 0
   m_Name: LDoor
   m_TagString: Untagged
@@ -1756,28 +1780,6 @@ Transform:
   m_Father: {fileID: 7535184312715183554}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7926036374300473990
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6580876023890905677}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c68c61f8d35abba45896ca2ca7e81cd4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  opened: 0
-  canPickUp: 1
-  locked: 0
-  spinning: 0
-  alarm: 0
-  reversed: 1
-  requiredItem: 
-  searchable: 0
-  readable: 0
-  lookedAt: 0
 --- !u!65 &1031819131682837199
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1791,6 +1793,34 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 0.24219513}
   m_Center: {x: -2.42, y: 0.37, z: -4.6289024}
+--- !u!114 &6513621472194435483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6580876023890905677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 532a6444cb37acb4b865a71acc4cc8b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  opened: 0
+  isDoor: 1
+  isDrawer: 0
+  locked: 0
+  requiredItem: 
+  doorHinge: {fileID: 0}
+  reversed: 1
+  canPickUp: 0
+  spinning: 0
+  hasAlarm: 0
+  searchable: 0
+  itemInside: {fileID: 0}
+  readable: 0
+  message: Placeholder Text
+  messageAlive: 10
+  lookedAt: 0
 --- !u!1 &6760900943624798219
 GameObject:
   m_ObjectHideFlags: 0
@@ -1911,8 +1941,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7248333959007564226}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.25, y: 2, z: 0.4252}
-  m_LocalScale: {x: 2.35, y: 4, z: 0.1}
+  m_LocalPosition: {x: 1.25, y: 2, z: 0.327}
+  m_LocalScale: {x: 2.4, y: 4, z: 0.1}
   m_Children: []
   m_Father: {fileID: 2721423430522452984}
   m_RootOrder: 2
@@ -2452,8 +2482,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3296700911927207575}
-  - component: {fileID: 1943369556568524184}
   - component: {fileID: 1918348095667326647}
+  - component: {fileID: 7899928323443338170}
   m_Layer: 0
   m_Name: LDoor
   m_TagString: Untagged
@@ -2477,28 +2507,6 @@ Transform:
   m_Father: {fileID: 165689568754067511}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1943369556568524184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8958955509993368874}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c68c61f8d35abba45896ca2ca7e81cd4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  opened: 0
-  canPickUp: 1
-  locked: 0
-  spinning: 0
-  alarm: 0
-  reversed: 1
-  requiredItem: 
-  searchable: 0
-  readable: 0
-  lookedAt: 0
 --- !u!65 &1918348095667326647
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2512,6 +2520,34 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 0.24219513}
   m_Center: {x: -2.42, y: 0.37, z: -4.6289024}
+--- !u!114 &7899928323443338170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8958955509993368874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 532a6444cb37acb4b865a71acc4cc8b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  opened: 0
+  isDoor: 1
+  isDrawer: 0
+  locked: 0
+  requiredItem: 
+  doorHinge: {fileID: 0}
+  reversed: 1
+  canPickUp: 0
+  spinning: 0
+  hasAlarm: 0
+  searchable: 0
+  itemInside: {fileID: 0}
+  readable: 0
+  message: Placeholder Text
+  messageAlive: 10
+  lookedAt: 0
 --- !u!1001 &26895196779633191
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2522,6 +2558,10 @@ PrefabInstance:
     - target: {fileID: 151182, guid: ce4c526025139f64284c1e50a856439b, type: 3}
       propertyPath: m_Name
       value: myButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 151182, guid: ce4c526025139f64284c1e50a856439b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 470578, guid: ce4c526025139f64284c1e50a856439b, type: 3}
       propertyPath: m_RootOrder
@@ -2598,6 +2638,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: myButton
       objectReference: {fileID: 0}
+    - target: {fileID: 151182, guid: ce4c526025139f64284c1e50a856439b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 470578, guid: ce4c526025139f64284c1e50a856439b, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2672,6 +2716,10 @@ PrefabInstance:
     - target: {fileID: 151182, guid: ce4c526025139f64284c1e50a856439b, type: 3}
       propertyPath: m_Name
       value: myButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 151182, guid: ce4c526025139f64284c1e50a856439b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 470578, guid: ce4c526025139f64284c1e50a856439b, type: 3}
       propertyPath: m_RootOrder
@@ -2748,6 +2796,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: myButton
       objectReference: {fileID: 0}
+    - target: {fileID: 151182, guid: ce4c526025139f64284c1e50a856439b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 470578, guid: ce4c526025139f64284c1e50a856439b, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2823,6 +2875,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: myButton
       objectReference: {fileID: 0}
+    - target: {fileID: 151182, guid: ce4c526025139f64284c1e50a856439b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 470578, guid: ce4c526025139f64284c1e50a856439b, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2897,6 +2953,10 @@ PrefabInstance:
     - target: {fileID: 151182, guid: ce4c526025139f64284c1e50a856439b, type: 3}
       propertyPath: m_Name
       value: myButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 151182, guid: ce4c526025139f64284c1e50a856439b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 470578, guid: ce4c526025139f64284c1e50a856439b, type: 3}
       propertyPath: m_RootOrder

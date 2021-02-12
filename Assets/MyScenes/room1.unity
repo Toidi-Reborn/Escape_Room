@@ -730,13 +730,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   opened: 0
-  canPickUp: 1
+  canPickUp: 0
   locked: 0
   spinning: 0
   alarm: 0
   reversed: 0
   requiredItem: 
-  searchable: 0
+  searchable: 1
   readable: 0
   lookedAt: 0
   itemInside: {fileID: 0}
@@ -760,6 +760,12 @@ CapsuleCollider:
   m_Height: 15.744807
   m_Direction: 1
   m_Center: {x: -0.0000076293945, y: 7.8724036, z: -0.000030755997}
+--- !u!1 &70800849 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 395736071, guid: 8cb0c78005ec1a24a9a42d330be6b749,
+    type: 3}
+  m_PrefabInstance: {fileID: 1392982601233796230}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &71126904 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 155204, guid: 8a9be1affa6896c4cb24054f32f758d1,
@@ -779,7 +785,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 9, y: 9, z: 9}
   m_Center: {x: 0, y: 4.5, z: 0}
---- !u!114 &71126908
+--- !u!114 &71126906
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -788,20 +794,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 71126904}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ba626f984b52cb4f9af1fe4475959ec, type: 3}
+  m_Script: {fileID: 11500000, guid: 532a6444cb37acb4b865a71acc4cc8b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   opened: 0
-  canPickUp: 1
+  isDoor: 0
+  isDrawer: 0
   locked: 0
-  spinning: 0
-  alarm: 0
-  reversed: 0
   requiredItem: 
-  searchable: 0
-  readable: 0
-  lookedAt: 0
+  doorHinge: {fileID: 0}
+  reversed: 0
+  canPickUp: 0
+  spinning: 0
+  hasAlarm: 0
+  searchable: 1
   itemInside: {fileID: 0}
+  readable: 0
+  message: Placeholder Text
+  messageAlive: 10
+  lookedAt: 0
 --- !u!4 &72962121 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5787661228839558036, guid: b73c49b3d25b309438be09bca08ffdd2,
@@ -1096,20 +1107,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 97547139}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ba626f984b52cb4f9af1fe4475959ec, type: 3}
+  m_Script: {fileID: 11500000, guid: 532a6444cb37acb4b865a71acc4cc8b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   opened: 0
-  canPickUp: 1
+  isDoor: 0
+  isDrawer: 0
   locked: 0
-  spinning: 0
-  alarm: 0
-  reversed: 0
   requiredItem: 
-  searchable: 0
-  readable: 0
-  lookedAt: 0
+  doorHinge: {fileID: 0}
+  reversed: 0
+  canPickUp: 0
+  spinning: 0
+  hasAlarm: 0
+  searchable: 1
   itemInside: {fileID: 0}
+  readable: 0
+  message: Placeholder Text
+  messageAlive: 10
+  lookedAt: 0
 --- !u!43 &101209542
 Mesh:
   m_ObjectHideFlags: 0
@@ -1390,6 +1406,34 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.7920547, y: 0.000218925, z: 1.1032131}
   m_Center: {x: 0, y: 0.0001094625, z: 0}
+--- !u!114 &182828594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 182828592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 532a6444cb37acb4b865a71acc4cc8b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  opened: 0
+  isDoor: 0
+  isDrawer: 0
+  locked: 0
+  requiredItem: 
+  doorHinge: {fileID: 0}
+  reversed: 0
+  canPickUp: 0
+  spinning: 0
+  hasAlarm: 0
+  searchable: 0
+  itemInside: {fileID: 0}
+  readable: 1
+  message: 'Note: Really?  How many pallets do you need?'
+  messageAlive: 25
+  lookedAt: 0
 --- !u!4 &186963248 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 8fa6215b40a260e42a29384b61d80d83,
@@ -1595,6 +1639,34 @@ CapsuleCollider:
   m_Height: 8.220329
   m_Direction: 1
   m_Center: {x: 0, y: 4.1101646, z: 0.00000071525574}
+--- !u!114 &203384893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 203384886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 532a6444cb37acb4b865a71acc4cc8b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  opened: 0
+  isDoor: 0
+  isDrawer: 0
+  locked: 0
+  requiredItem: 
+  doorHinge: {fileID: 0}
+  reversed: 0
+  canPickUp: 0
+  spinning: 0
+  hasAlarm: 0
+  searchable: 1
+  itemInside: {fileID: 70800849}
+  readable: 0
+  message: Placeholder Text
+  messageAlive: 10
+  lookedAt: 0
 --- !u!4 &207740833 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2496795980138045295, guid: cfcdf4c49b6dc9949aaef4e4512e43f3,
@@ -2316,13 +2388,7 @@ CapsuleCollider:
   m_Height: 110.058784
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 80.55576}
---- !u!4 &402146561 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 496572, guid: 34ab71bbe4db4864ca5a58734e958d25,
-    type: 3}
-  m_PrefabInstance: {fileID: 2146062307}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &402146562
+--- !u!114 &402146559
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2331,20 +2397,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 402146557}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ba626f984b52cb4f9af1fe4475959ec, type: 3}
+  m_Script: {fileID: 11500000, guid: 532a6444cb37acb4b865a71acc4cc8b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   opened: 0
-  canPickUp: 1
+  isDoor: 0
+  isDrawer: 0
   locked: 0
-  spinning: 0
-  alarm: 0
-  reversed: 0
   requiredItem: 
-  searchable: 0
-  readable: 0
-  lookedAt: 0
+  doorHinge: {fileID: 0}
+  reversed: 0
+  canPickUp: 0
+  spinning: 0
+  hasAlarm: 0
+  searchable: 1
   itemInside: {fileID: 0}
+  readable: 0
+  message: Placeholder Text
+  messageAlive: 10
+  lookedAt: 0
+--- !u!4 &402146561 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 496572, guid: 34ab71bbe4db4864ca5a58734e958d25,
+    type: 3}
+  m_PrefabInstance: {fileID: 2146062307}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &406368608
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4449,20 +4526,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 675019032}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ba626f984b52cb4f9af1fe4475959ec, type: 3}
+  m_Script: {fileID: 11500000, guid: 532a6444cb37acb4b865a71acc4cc8b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   opened: 0
-  canPickUp: 1
+  isDoor: 0
+  isDrawer: 0
   locked: 0
-  spinning: 0
-  alarm: 0
-  reversed: 0
   requiredItem: 
-  searchable: 0
-  readable: 0
-  lookedAt: 0
+  doorHinge: {fileID: 0}
+  reversed: 0
+  canPickUp: 0
+  spinning: 0
+  hasAlarm: 0
+  searchable: 1
   itemInside: {fileID: 0}
+  readable: 0
+  message: Placeholder Text
+  messageAlive: 10
+  lookedAt: 0
 --- !u!1001 &706960565
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5289,40 +5371,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7133062471516114463, guid: 9922ad25469d4494fb57b8beefe6ede2,
-        type: 3}
-      propertyPath: alarm
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7133062471516114463, guid: 9922ad25469d4494fb57b8beefe6ede2,
-        type: 3}
-      propertyPath: locked
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7133062471516114463, guid: 9922ad25469d4494fb57b8beefe6ede2,
-        type: 3}
-      propertyPath: requiredItem
-      value: Key 003
-      objectReference: {fileID: 0}
     - target: {fileID: 7263466800976448128, guid: 9922ad25469d4494fb57b8beefe6ede2,
         type: 3}
       propertyPath: m_RootOrder
       value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 7263466800976448128, guid: 9922ad25469d4494fb57b8beefe6ede2,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.3583
-      objectReference: {fileID: 0}
-    - target: {fileID: 7263466800976448128, guid: 9922ad25469d4494fb57b8beefe6ede2,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.3583
-      objectReference: {fileID: 0}
-    - target: {fileID: 7263466800976448128, guid: 9922ad25469d4494fb57b8beefe6ede2,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.3583
       objectReference: {fileID: 0}
     - target: {fileID: 7263466800976448128, guid: 9922ad25469d4494fb57b8beefe6ede2,
         type: 3}
@@ -6167,7 +6219,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2297143865402101011, guid: 74c083a4a9e143c4787365c6243f03f1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 74c083a4a9e143c4787365c6243f03f1, type: 3}
 --- !u!1 &959403551 stripped
 GameObject:
@@ -6188,6 +6241,34 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.7920549, y: 0.000218925, z: 1.1032132}
   m_Center: {x: -0.000061035156, y: 0.0001094625, z: 0.000030517578}
+--- !u!114 &959403554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959403551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 532a6444cb37acb4b865a71acc4cc8b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  opened: 0
+  isDoor: 0
+  isDrawer: 0
+  locked: 0
+  requiredItem: 
+  doorHinge: {fileID: 0}
+  reversed: 0
+  canPickUp: 0
+  spinning: 0
+  hasAlarm: 0
+  searchable: 0
+  itemInside: {fileID: 0}
+  readable: 1
+  message: 'Note: I can''t believe how many Saw movies they made!!!!'
+  messageAlive: 25
+  lookedAt: 0
 --- !u!1 &966427388
 GameObject:
   m_ObjectHideFlags: 0
@@ -6386,6 +6467,16 @@ PrefabInstance:
       propertyPath: message
       value: 'Note:  Don''t forget to pick up half a dozen eggs today.  Love, Mom'
       objectReference: {fileID: 0}
+    - target: {fileID: 2297143865402101011, guid: 74c083a4a9e143c4787365c6243f03f1,
+        type: 3}
+      propertyPath: canPickUp
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2297143865402101011, guid: 74c083a4a9e143c4787365c6243f03f1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5044230373794461655, guid: 74c083a4a9e143c4787365c6243f03f1,
         type: 3}
       propertyPath: m_Name
@@ -6461,7 +6552,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2297143865402101011, guid: 74c083a4a9e143c4787365c6243f03f1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 74c083a4a9e143c4787365c6243f03f1, type: 3}
 --- !u!1 &1038236166 stripped
 GameObject:
@@ -6482,6 +6574,34 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.7920547, y: 0.000218925, z: 1.103213}
   m_Center: {x: 0, y: 0.0001094625, z: 0}
+--- !u!114 &1038236172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038236166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 532a6444cb37acb4b865a71acc4cc8b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  opened: 0
+  isDoor: 0
+  isDrawer: 0
+  locked: 0
+  requiredItem: 
+  doorHinge: {fileID: 0}
+  reversed: 0
+  canPickUp: 0
+  spinning: 0
+  hasAlarm: 0
+  searchable: 0
+  itemInside: {fileID: 0}
+  readable: 1
+  message: 'Note:  Don''t forget to pick up half a dozen eggs today.  Love, Mom'
+  messageAlive: 25
+  lookedAt: 0
 --- !u!1001 &1038476323
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6873,6 +6993,11 @@ PrefabInstance:
       propertyPath: readable
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2297143865402101011, guid: 74c083a4a9e143c4787365c6243f03f1,
+        type: 3}
+      propertyPath: reversed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5044230373794461655, guid: 74c083a4a9e143c4787365c6243f03f1,
         type: 3}
       propertyPath: m_Name
@@ -6948,7 +7073,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2297143865402101011, guid: 74c083a4a9e143c4787365c6243f03f1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 74c083a4a9e143c4787365c6243f03f1, type: 3}
 --- !u!1001 &1117588147
 PrefabInstance:
@@ -9074,20 +9200,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1457370173}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ba626f984b52cb4f9af1fe4475959ec, type: 3}
+  m_Script: {fileID: 11500000, guid: 532a6444cb37acb4b865a71acc4cc8b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   opened: 0
-  canPickUp: 1
+  isDoor: 0
+  isDrawer: 0
   locked: 0
-  spinning: 0
-  alarm: 0
-  reversed: 0
   requiredItem: 
-  searchable: 0
-  readable: 0
-  lookedAt: 0
+  doorHinge: {fileID: 0}
+  reversed: 0
+  canPickUp: 0
+  spinning: 0
+  hasAlarm: 0
+  searchable: 1
   itemInside: {fileID: 0}
+  readable: 0
+  message: Placeholder Text
+  messageAlive: 10
+  lookedAt: 0
 --- !u!1001 &1471349328
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9552,6 +9683,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 415788, guid: ee593e412b8c9f54a80749400f127d89, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4178019617209667602, guid: ee593e412b8c9f54a80749400f127d89,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4178019617209667602, guid: ee593e412b8c9f54a80749400f127d89,
@@ -12093,7 +12229,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 9, y: 9, z: 9}
   m_Center: {x: 0, y: 4.5, z: 0}
---- !u!114 &1702669396
+--- !u!114 &1702669394
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12102,20 +12238,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1702669392}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ba626f984b52cb4f9af1fe4475959ec, type: 3}
+  m_Script: {fileID: 11500000, guid: 532a6444cb37acb4b865a71acc4cc8b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   opened: 0
-  canPickUp: 1
+  isDoor: 0
+  isDrawer: 0
   locked: 0
-  spinning: 0
-  alarm: 0
-  reversed: 0
   requiredItem: 
-  searchable: 0
-  readable: 0
-  lookedAt: 0
+  doorHinge: {fileID: 0}
+  reversed: 0
+  canPickUp: 0
+  spinning: 0
+  hasAlarm: 0
+  searchable: 1
   itemInside: {fileID: 0}
+  readable: 0
+  message: Placeholder Text
+  messageAlive: 10
+  lookedAt: 0
 --- !u!1 &1710097285
 GameObject:
   m_ObjectHideFlags: 0
@@ -16224,20 +16365,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 2022795741}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ba626f984b52cb4f9af1fe4475959ec, type: 3}
+  m_Script: {fileID: 11500000, guid: 532a6444cb37acb4b865a71acc4cc8b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   opened: 0
-  canPickUp: 1
+  isDoor: 0
+  isDrawer: 0
   locked: 0
-  spinning: 0
-  alarm: 0
-  reversed: 0
   requiredItem: 
-  searchable: 0
-  readable: 0
-  lookedAt: 0
+  doorHinge: {fileID: 0}
+  reversed: 0
+  canPickUp: 0
+  spinning: 0
+  hasAlarm: 0
+  searchable: 1
   itemInside: {fileID: 0}
+  readable: 0
+  message: Placeholder Text
+  messageAlive: 10
+  lookedAt: 0
 --- !u!1 &2028300035
 GameObject:
   m_ObjectHideFlags: 0
@@ -16664,29 +16810,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.8635454, y: 6.6218643, z: 5.4164906}
   m_Center: {x: 0.05587864, y: 2.9642723, z: 0.27716568}
---- !u!114 &2054315952
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2054315948}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ba626f984b52cb4f9af1fe4475959ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  opened: 0
-  canPickUp: 1
-  locked: 0
-  spinning: 0
-  alarm: 0
-  reversed: 0
-  requiredItem: 
-  searchable: 0
-  readable: 0
-  lookedAt: 0
-  itemInside: {fileID: 0}
 --- !u!1 &2063754179 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: cba00f75539bc564fabb9136fccfac6c,
@@ -16892,7 +17015,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2297143865402101011, guid: 74c083a4a9e143c4787365c6243f03f1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 74c083a4a9e143c4787365c6243f03f1, type: 3}
 --- !u!1 &2112883139 stripped
 GameObject:
@@ -16913,6 +17037,34 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.7920551, y: 0.000218925, z: 1.1032134}
   m_Center: {x: 0, y: 0.0001094625, z: 0}
+--- !u!114 &2112883141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2112883139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 532a6444cb37acb4b865a71acc4cc8b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  opened: 0
+  isDoor: 0
+  isDrawer: 0
+  locked: 0
+  requiredItem: 
+  doorHinge: {fileID: 0}
+  reversed: 0
+  canPickUp: 0
+  spinning: 0
+  hasAlarm: 0
+  searchable: 0
+  itemInside: {fileID: 0}
+  readable: 1
+  message: 'Note:  Please fire Jimmy.  He keeps walking everyone!!!!'
+  messageAlive: 25
+  lookedAt: 0
 --- !u!1001 &2146062307
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17723,46 +17875,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 603002823281054995, guid: 04b2cf59114fd234681f40c631317e51,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 823790894911022950, guid: 04b2cf59114fd234681f40c631317e51,
-        type: 3}
-      propertyPath: locked
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 823790894911022950, guid: 04b2cf59114fd234681f40c631317e51,
-        type: 3}
-      propertyPath: requiredItem
-      value: Key 004
-      objectReference: {fileID: 0}
-    - target: {fileID: 1013833171375992800, guid: 04b2cf59114fd234681f40c631317e51,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1131755676184933960, guid: 04b2cf59114fd234681f40c631317e51,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1705530756149341511, guid: 04b2cf59114fd234681f40c631317e51,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1874196013864422011, guid: 04b2cf59114fd234681f40c631317e51,
-        type: 3}
-      propertyPath: locked
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1874196013864422011, guid: 04b2cf59114fd234681f40c631317e51,
-        type: 3}
-      propertyPath: requiredItem
-      value: Key 004
-      objectReference: {fileID: 0}
     - target: {fileID: 2721423430522452984, guid: 04b2cf59114fd234681f40c631317e51,
         type: 3}
       propertyPath: m_RootOrder
@@ -17771,7 +17883,7 @@ PrefabInstance:
     - target: {fileID: 2721423430522452984, guid: 04b2cf59114fd234681f40c631317e51,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -23.44
+      value: -23.46
       objectReference: {fileID: 0}
     - target: {fileID: 2721423430522452984, guid: 04b2cf59114fd234681f40c631317e51,
         type: 3}
@@ -17822,26 +17934,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BookShelfWDoors
-      objectReference: {fileID: 0}
-    - target: {fileID: 7926036374300473990, guid: 04b2cf59114fd234681f40c631317e51,
-        type: 3}
-      propertyPath: locked
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7926036374300473990, guid: 04b2cf59114fd234681f40c631317e51,
-        type: 3}
-      propertyPath: requiredItem
-      value: Key 002
-      objectReference: {fileID: 0}
-    - target: {fileID: 7958188141991076209, guid: 04b2cf59114fd234681f40c631317e51,
-        type: 3}
-      propertyPath: locked
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7958188141991076209, guid: 04b2cf59114fd234681f40c631317e51,
-        type: 3}
-      propertyPath: requiredItem
-      value: Key 002
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04b2cf59114fd234681f40c631317e51, type: 3}

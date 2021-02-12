@@ -383,6 +383,7 @@ GameObject:
   - component: {fileID: 2790940667934397522}
   - component: {fileID: 2041714800}
   - component: {fileID: 592898382}
+  - component: {fileID: 3564902343313864631}
   m_Layer: 0
   m_Name: Drawer Bot LG (1)
   m_TagString: Untagged
@@ -433,14 +434,48 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 688965280514354401}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9d3c950b7f0aeb4f88abd116c995666, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   opened: 0
-  interactable: 1
+  canPickUp: 1
   locked: 0
+  spinning: 0
+  alarm: 0
+  reversed: 0
+  requiredItem: 
+  searchable: 0
+  readable: 0
+  lookedAt: 0
+--- !u!114 &3564902343313864631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 688965280514354401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 532a6444cb37acb4b865a71acc4cc8b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  opened: 0
+  isDoor: 0
+  isDrawer: 1
+  locked: 0
+  requiredItem: 
+  doorHinge: {fileID: 0}
+  reversed: 0
+  canPickUp: 0
+  spinning: 0
+  hasAlarm: 0
+  searchable: 0
+  itemInside: {fileID: 0}
+  readable: 0
+  message: Placeholder Text
+  messageAlive: 10
   lookedAt: 0
 --- !u!1 &730048833054012948
 GameObject:
@@ -732,6 +767,7 @@ GameObject:
   - component: {fileID: 8408364483542451507}
   - component: {fileID: 1985085304}
   - component: {fileID: 952983898}
+  - component: {fileID: 8092165610567837582}
   m_Layer: 0
   m_Name: Drawer Bot - SM (2)
   m_TagString: Untagged
@@ -782,14 +818,48 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1071234821279199832}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9d3c950b7f0aeb4f88abd116c995666, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   opened: 0
-  interactable: 1
+  canPickUp: 1
   locked: 0
+  spinning: 0
+  alarm: 0
+  reversed: 0
+  requiredItem: 
+  searchable: 0
+  readable: 0
+  lookedAt: 0
+--- !u!114 &8092165610567837582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1071234821279199832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 532a6444cb37acb4b865a71acc4cc8b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  opened: 0
+  isDoor: 0
+  isDrawer: 1
+  locked: 0
+  requiredItem: 
+  doorHinge: {fileID: 0}
+  reversed: 0
+  canPickUp: 0
+  spinning: 0
+  hasAlarm: 0
+  searchable: 0
+  itemInside: {fileID: 0}
+  readable: 0
+  message: Placeholder Text
+  messageAlive: 10
   lookedAt: 0
 --- !u!1 &1222430977040551585
 GameObject:
@@ -802,6 +872,7 @@ GameObject:
   - component: {fileID: 5787661228839558036}
   - component: {fileID: 603487982}
   - component: {fileID: 883465340}
+  - component: {fileID: 5390282549052836615}
   m_Layer: 0
   m_Name: Drawer Bottom
   m_TagString: Untagged
@@ -852,14 +923,48 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1222430977040551585}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9d3c950b7f0aeb4f88abd116c995666, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   opened: 0
-  interactable: 1
+  canPickUp: 1
   locked: 0
+  spinning: 0
+  alarm: 0
+  reversed: 0
+  requiredItem: 
+  searchable: 0
+  readable: 0
+  lookedAt: 0
+--- !u!114 &5390282549052836615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222430977040551585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 532a6444cb37acb4b865a71acc4cc8b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  opened: 0
+  isDoor: 0
+  isDrawer: 1
+  locked: 0
+  requiredItem: 
+  doorHinge: {fileID: 0}
+  reversed: 0
+  canPickUp: 0
+  spinning: 0
+  hasAlarm: 0
+  searchable: 0
+  itemInside: {fileID: 0}
+  readable: 0
+  message: Placeholder Text
+  messageAlive: 10
   lookedAt: 0
 --- !u!1 &1380538526771035451
 GameObject:
@@ -1745,6 +1850,7 @@ GameObject:
   - component: {fileID: 7935799215400030499}
   - component: {fileID: 1450999382}
   - component: {fileID: 691748221}
+  - component: {fileID: 5324761004739102741}
   m_Layer: 0
   m_Name: Drawer Top - SM1
   m_TagString: Untagged
@@ -1795,14 +1901,48 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2545402349082302296}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9d3c950b7f0aeb4f88abd116c995666, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   opened: 0
-  interactable: 1
+  canPickUp: 1
   locked: 0
+  spinning: 0
+  alarm: 0
+  reversed: 0
+  requiredItem: 
+  searchable: 0
+  readable: 0
+  lookedAt: 0
+--- !u!114 &5324761004739102741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2545402349082302296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 532a6444cb37acb4b865a71acc4cc8b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  opened: 0
+  isDoor: 0
+  isDrawer: 1
+  locked: 0
+  requiredItem: 
+  doorHinge: {fileID: 0}
+  reversed: 0
+  canPickUp: 0
+  spinning: 0
+  hasAlarm: 0
+  searchable: 0
+  itemInside: {fileID: 0}
+  readable: 0
+  message: Placeholder Text
+  messageAlive: 10
   lookedAt: 0
 --- !u!1 &2603876541593952082
 GameObject:
@@ -3024,6 +3164,7 @@ GameObject:
   - component: {fileID: 7794039181162832465}
   - component: {fileID: 1392819891}
   - component: {fileID: 141698911}
+  - component: {fileID: 5793381326983886571}
   m_Layer: 0
   m_Name: Drawer Top - LG
   m_TagString: Untagged
@@ -3074,14 +3215,48 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4587119745530845428}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9d3c950b7f0aeb4f88abd116c995666, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   opened: 0
-  interactable: 1
+  canPickUp: 1
   locked: 1
+  spinning: 0
+  alarm: 0
+  reversed: 0
+  requiredItem: 
+  searchable: 0
+  readable: 0
+  lookedAt: 0
+--- !u!114 &5793381326983886571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4587119745530845428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 532a6444cb37acb4b865a71acc4cc8b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  opened: 0
+  isDoor: 0
+  isDrawer: 1
+  locked: 0
+  requiredItem: 
+  doorHinge: {fileID: 0}
+  reversed: 0
+  canPickUp: 0
+  spinning: 0
+  hasAlarm: 0
+  searchable: 0
+  itemInside: {fileID: 0}
+  readable: 0
+  message: Placeholder Text
+  messageAlive: 10
   lookedAt: 0
 --- !u!1 &4870060638336254732
 GameObject:
@@ -4970,6 +5145,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: myButton
       objectReference: {fileID: 0}
+    - target: {fileID: 4320223852407087949, guid: 6de40bfb8c92a334eb49c9e1c0b359f2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6de40bfb8c92a334eb49c9e1c0b359f2, type: 3}
 --- !u!4 &1516981423761510003 stripped
@@ -5060,6 +5240,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: myButton
       objectReference: {fileID: 0}
+    - target: {fileID: 4320223852407087949, guid: 6de40bfb8c92a334eb49c9e1c0b359f2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6de40bfb8c92a334eb49c9e1c0b359f2, type: 3}
 --- !u!4 &8815678859101203199 stripped
@@ -5134,6 +5319,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: myButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 4320223852407087949, guid: 6de40bfb8c92a334eb49c9e1c0b359f2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6de40bfb8c92a334eb49c9e1c0b359f2, type: 3}
@@ -5225,6 +5415,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: myButton
       objectReference: {fileID: 0}
+    - target: {fileID: 4320223852407087949, guid: 6de40bfb8c92a334eb49c9e1c0b359f2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6de40bfb8c92a334eb49c9e1c0b359f2, type: 3}
 --- !u!4 &8271274448975489124 stripped
@@ -5299,6 +5494,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: myButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 4320223852407087949, guid: 6de40bfb8c92a334eb49c9e1c0b359f2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6de40bfb8c92a334eb49c9e1c0b359f2, type: 3}
