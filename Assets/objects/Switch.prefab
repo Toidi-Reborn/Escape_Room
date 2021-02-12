@@ -103,7 +103,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7252298504271995696}
-  - component: {fileID: 2549313538595399971}
+  - component: {fileID: 1906949580}
+  - component: {fileID: 1906949582}
   m_Layer: 0
   m_Name: Switch
   m_TagString: Untagged
@@ -128,7 +129,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2549313538595399971
+--- !u!65 &1906949580
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4538314093258378886}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.4419956, z: 0.32963967}
+  m_Center: {x: -0, y: 0.00015878677, z: -0.20487213}
+--- !u!114 &1906949582
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -137,14 +151,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 4538314093258378886}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87bee0801eeff6942ae53a124ad61b4d, type: 3}
+  m_Script: {fileID: 11500000, guid: fd6b30638dc622947b4adb20d0ae7976, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  opened: 0
+  canPickUp: 1
+  locked: 0
+  spinning: 0
+  alarm: 0
+  reversed: 0
+  requiredItem: 
+  searchable: 0
+  readable: 0
+  lookedAt: 0
   light1: {fileID: 0}
   light2: {fileID: 0}
   light3: {fileID: 0}
-  light4: {fileID: 0}
-  light5: {fileID: 0}
 --- !u!1 &6890226527382068545
 GameObject:
   m_ObjectHideFlags: 0

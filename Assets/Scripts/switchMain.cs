@@ -8,6 +8,7 @@ public class switchMain : interactable
     [SerializeField] GameObject light1;
     [SerializeField] GameObject light2;
     [SerializeField] GameObject light3;
+    [SerializeField] GameObject blMessage;
 
 
     GameObject on;
@@ -26,6 +27,8 @@ public class switchMain : interactable
 
         on = GameObject.Find("On");
         off = GameObject.Find("Off");
+        blMessage.SetActive(false);
+
 
         on.gameObject.GetComponent<MeshRenderer>().material.color = greenColorOn;
         off.gameObject.GetComponent<MeshRenderer>().material.color = redColorOff;
@@ -64,6 +67,7 @@ public class switchMain : interactable
             off.transform.Translate(0, -0.1f, 0 * Time.deltaTime * 3.5f);
 
 
+            blMessage.SetActive(false);
             light1.SetActive(true);
 
             if (light2 != null)
@@ -84,7 +88,7 @@ public class switchMain : interactable
             on.transform.Translate(0, -0.1f, 0 * Time.deltaTime * 3.5f);
             off.transform.Translate(0, 0.1f, 0 * Time.deltaTime * 3.5f);
 
-
+            blMessage.SetActive(true);
             light1.SetActive(false);
             if (light2 != null)
             {
