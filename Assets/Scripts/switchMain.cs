@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class switchMain : interactable
+public class switchMain : actionItem
 {
     private List<GameObject> allLights = new List<GameObject>();
     [SerializeField] GameObject light1;

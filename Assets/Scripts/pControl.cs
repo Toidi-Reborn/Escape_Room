@@ -12,10 +12,10 @@ public class pControl : MonoBehaviour
     float range = 28f;
 
     GameObject thisHit;  //for raycast
-    openClose thisDrawer; // drawer movement
-    openCloseDoor thisDoor; // door movement
+    //openClose thisDrawer; // drawer movement
+    //openCloseDoor thisDoor; // door movement
 
-    pickup thisPickUp; // item pickup
+    //pickup thisPickUp; // item pickup
     keyPad thisKeyPad; // keypad
     dailRotate thisDail; // end game dail
     monitor thisPC;  // PC Screen
@@ -32,8 +32,12 @@ public class pControl : MonoBehaviour
     GameObject sText;
     GameObject pText;
     GameObject rText;
-    GameObject centerLook;
 
+    GameObject centerLook;
+    GameObject centerTextGO;
+    public Text centerTextHolder;
+    public string centerText = "";
+    
     public Text pTextHolder;
 
        
@@ -59,6 +63,10 @@ public class pControl : MonoBehaviour
     void Start(){
 
         centerLook = GameObject.Find("SelectIMG");
+        centerTextGO = GameObject.Find("centerText");
+        centerTextHolder = centerTextGO.transform.gameObject.GetComponent<Text>();
+
+
         aText = GameObject.Find("actionText");
         lText = GameObject.Find("lockedText");
         sText = GameObject.Find("searchText");
@@ -74,6 +82,7 @@ public class pControl : MonoBehaviour
         pText.SetActive(false);
         rText.SetActive(false);
         centerLook.SetActive(false);
+        centerTextGO.SetActive(false);
 
         //for test
         //Debug.Log(charBottomM + " - " + charBottomC + " - " + charheightM + " - " + charheightC);
@@ -83,7 +92,7 @@ public class pControl : MonoBehaviour
 
 
     void Update(){
-        ProcessRaycast2();
+        //ProcessRaycast2();
         keyPadRayCast();
         DailRayCast();
 
@@ -105,6 +114,8 @@ public class pControl : MonoBehaviour
         sText.SetActive(false);
         rText.SetActive(false);
         centerLook.SetActive(false);
+        centerTextGO.SetActive(false);
+
 
         if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, range))
         {
@@ -117,15 +128,12 @@ public class pControl : MonoBehaviour
             else
             {
                 thisRayHit.lookedAt = true;
+
                 centerLook.SetActive(true);
-                if (thisRayHit.searchable)
-                {
-                    sText.SetActive(true);
-                } else if (thisRayHit.readable)
-                {
-                    rText.SetActive(true);
-                }
-                
+                centerTextGO.SetActive(true);
+                centerTextHolder.text = centerText;
+
+
             }
         }
 
@@ -174,7 +182,7 @@ public class pControl : MonoBehaviour
 
     }
 
-
+    /*
     private void ProcessRaycast2(){
         RaycastHit hit;
 
@@ -185,7 +193,7 @@ public class pControl : MonoBehaviour
         
             thisDrawer = hit.collider.gameObject.GetComponent<openClose>();
             
-            /*
+            
              * 
              * OLD = switch to universal raycasrt
              * 
@@ -225,11 +233,18 @@ public class pControl : MonoBehaviour
                 aText.SetActive(true);
                 centerLook.SetActive(true);         
             }
-            */
+            
 
             
-        } 
+        }
+
+
+
     }
+
+*/
+
+
 
 
     public void setPMessage(string message, int timeout)

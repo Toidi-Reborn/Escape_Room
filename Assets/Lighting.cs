@@ -19,6 +19,11 @@ public class Lighting : MonoBehaviour
 
     [SerializeField] int lightTotal = 10;
 
+
+
+    //temp to test
+    bookshelfMove bookshelf;
+
     
 
     void Start()
@@ -29,15 +34,19 @@ public class Lighting : MonoBehaviour
 
         }
 
+        //temp to test
+        bookshelf = GameObject.Find("BookShelf").GetComponent<bookshelfMove>();
 
-        
+
     }
     
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.L))
         {
-            lightToggle(light1);
+            //lightToggle(light1);
+            //bookshelf.moving = true;
+            bookshelf.startOpen();
         }
 
 

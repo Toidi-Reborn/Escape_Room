@@ -33,12 +33,10 @@ public class actionItem : MonoBehaviour
     [SerializeField] public string message = "Placeholder Text";
     [SerializeField] public int messageAlive = 10;
 
-
-
+    public bool lookedAt = false;
+    
     pControl player;
     inventory myINV;
-
-    public bool lookedAt = false;
 
     
     void Start()
@@ -110,15 +108,19 @@ public class actionItem : MonoBehaviour
         {
             if (searchable)
             {
+                player.centerText = "Search";
                 search();
             } else if (readable)
             {
+                player.centerText = "Read";
                 readMessage();
             } else if (canPickUp)
             {
+                player.centerText = "Pick-Up";
                 pickup();
             } else if (isDoor || isDrawer)
             {
+                player.centerText = "Open / Close";
                 if (locked)
                 {
                     checkLock();
@@ -192,15 +194,22 @@ public class actionItem : MonoBehaviour
     {
         if (distanceMoved < 37f)
         {
-            if (reversed)
+            if (doorHinge == null)
             {
-                transform.parent.Rotate(0, -2.5f, 0 * Time.deltaTime);
-                distanceMoved += 1f;
+                Debug.Log("No Hinge Assigned");
             }
             else
             {
-                transform.parent.Rotate(0, 2.5f, 0 * Time.deltaTime);
-                distanceMoved += 1f;
+                if (reversed)
+                {
+                    doorHinge.transform.Rotate(0, -2.5f, 0 * Time.deltaTime);
+                    distanceMoved += 1f;
+                }
+                else
+                {
+                    doorHinge.transform.Rotate(0, 2.5f, 0 * Time.deltaTime);
+                    distanceMoved += 1f;
+                }
             }
         }
     }
@@ -209,15 +218,24 @@ public class actionItem : MonoBehaviour
     {
         if (distanceMoved > 0f)
         {
-            if (reversed)
+            if (doorHinge == null)
             {
-                transform.parent.Rotate(0, 2.5f, 0 * Time.deltaTime);
-                distanceMoved -= 1f;
+                Debug.Log("No Hinge Assigned");
+
             }
             else
             {
-                transform.parent.Rotate(0, -2.5f, 0 * Time.deltaTime);
-                distanceMoved -= 1f;
+                if (reversed)
+                {
+                    doorHinge.transform.Rotate(0, 2.5f, 0 * Time.deltaTime);
+                    distanceMoved -= 1f;
+                }
+                else
+                {
+                    doorHinge.transform.Rotate(0, -2.5f, 0 * Time.deltaTime);
+                    distanceMoved -= 1f;
+                }
+
             }
 
         }
